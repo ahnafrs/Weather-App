@@ -1,26 +1,28 @@
 import 'package:flutter/material.dart';
 
-class AdditionalInformation extends StatefulWidget {
-  const AdditionalInformation({super.key});
+class AdditionalInformation extends StatelessWidget {
+  final IconData icon;
+  final String label;
+  final String value;
+  const AdditionalInformation(
+      {super.key,
+      required this.icon,
+      required this.label,
+      required this.value});
 
-  @override
-  State<AdditionalInformation> createState() => _AdditionalInformationState();
-}
-
-class _AdditionalInformationState extends State<AdditionalInformation> {
   @override
   Widget build(BuildContext context) {
     return Column(
       children: [
-        Icon(Icons.water_drop),
+        Icon(icon),
         SizedBox(
           height: 6,
         ),
-        Text("Humidity"),
+        Text(label),
         SizedBox(
           height: 6,
         ),
-        Text("94"),
+        Text(value),
       ],
     );
   }
