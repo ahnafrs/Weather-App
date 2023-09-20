@@ -40,7 +40,13 @@ class _WeatherScreenState extends State<WeatherScreen> {
       appBar: AppBar(
         centerTitle: true,
         title: Text("Weather App"),
-        actions: [IconButton(onPressed: () {}, icon: Icon(Icons.refresh))],
+        actions: [
+          IconButton(
+              onPressed: () {
+                setState(() {});
+              },
+              icon: Icon(Icons.refresh))
+        ],
       ),
       body: FutureBuilder(
         future: getCurrentWeather(),
